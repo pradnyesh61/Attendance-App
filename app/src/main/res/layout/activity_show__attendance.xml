@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawerLayout"
+    tools:context=".MainActivity">
+    /*  fitsystemwindow fit in window and status bar will also show   */
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextColor="@color/gold"
+            android:id="@+id/toolbar"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout00"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/subject_check"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:hint="Subject - name"
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_border"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/date_check"
+                android:layout_width="15dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAlignment="center"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/round_button"
+                android:textStyle="bold"
+                android:gravity="center"
+              android:text="date" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="353dp"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout00"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/round_button"
+            android:text="CHECK" />
+
+        <View
+            android:id="@+id/view333"
+            android:layout_width="match_parent"
+            android:layout_height="184dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="290dp"
+            android:background="@drawable/ic_wave_down" />
+
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="493dp"
+            android:layout_below="@+id/button_check"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:padding="16dp"
+            android:transcriptMode="alwaysScroll" >
+        </ListView>
+
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="210dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginLeft="118dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="83dp"
+            android:layout_marginRight="83dp"
+            android:layout_marginBottom="612dp"
+            android:text="Attendance"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+
+            />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navigationView"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/header_profile_view"
+        >
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
